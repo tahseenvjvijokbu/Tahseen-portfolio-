@@ -1,0 +1,1025 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:linear-gradient(135deg,#fff9f5,#f7ede2,#f4e3d7);
+overflow-x:hidden;
+color:#2f1d1d;
+}
+
+/* Hero Section */
+
+.hero{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:40px 20px;
+position:relative;
+overflow:hidden;
+}
+
+/* Golden Glow */
+
+.hero::before{
+
+content:'';
+
+position:absolute;
+
+width:420px;
+height:420px;
+
+background:radial-gradient(circle,#d4af37 0%,transparent 70%);
+
+opacity:.18;
+
+border-radius:50%;
+
+top:-80px;
+right:-100px;
+
+filter:blur(40px);
+
+}
+
+.hero::after{
+
+content:'';
+
+position:absolute;
+
+width:320px;
+height:320px;
+
+background:#7b1e3b;
+
+opacity:.08;
+
+border-radius:50%;
+
+bottom:-120px;
+left:-100px;
+
+filter:blur(60px);
+
+}
+
+.hero-content{
+
+max-width:650px;
+
+text-align:center;
+
+position:relative;
+
+z-index:2;
+
+animation:fadeUp 1.2s ease;
+
+}
+
+/* Profile */
+
+.profile{
+
+width:190px;
+
+height:190px;
+
+border-radius:50%;
+
+object-fit:cover;
+
+border:6px solid #d4af37;
+
+box-shadow:
+0 15px 45px rgba(0,0,0,.18);
+
+transition:.5s;
+
+}
+
+.profile:hover{
+
+transform:scale(1.05);
+
+}
+
+/* Heading */
+
+h1{
+
+font-family:'Playfair Display',serif;
+
+font-size:52px;
+
+color:#6f1734;
+
+margin-top:28px;
+
+}
+
+h3{
+
+font-size:20px;
+
+font-weight:500;
+
+margin-top:12px;
+
+color:#b8860b;
+
+}
+
+/* Intro */
+
+.intro{
+
+margin:28px auto;
+
+line-height:1.9;
+
+font-size:17px;
+
+max-width:580px;
+
+color:#555;
+
+}
+
+/* Buttons */
+
+.buttons{
+
+display:flex;
+
+justify-content:center;
+
+gap:18px;
+
+flex-wrap:wrap;
+
+margin-top:25px;
+
+}
+
+.buttons a{
+
+text-decoration:none;
+
+padding:16px 34px;
+
+border-radius:40px;
+
+font-weight:600;
+
+transition:.35s;
+
+}
+
+/* Book */
+
+.book-btn{
+
+background:#7b1e3b;
+
+color:white;
+
+box-shadow:0 10px 25px rgba(123,30,59,.25);
+
+}
+
+.book-btn:hover{
+
+background:#5b1128;
+
+transform:translateY(-4px);
+
+}
+
+/* Course */
+
+.course-btn{
+
+background:#d4af37;
+
+color:#fff;
+
+box-shadow:0 10px 25px rgba(212,175,55,.25);
+
+}
+
+.course-btn:hover{
+
+background:#b88b1b;
+
+transform:translateY(-4px);
+
+}
+
+/* Social */
+
+.social{
+
+margin-top:38px;
+
+}
+
+.social a{
+
+text-decoration:none;
+
+color:#6f1734;
+
+font-size:18px;
+
+font-weight:600;
+
+}
+
+.social i{
+
+font-size:28px;
+
+margin-right:10px;
+
+color:#d62976;
+
+}
+
+/* Scroll */
+
+.scroll{
+
+margin-top:55px;
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+color:#777;
+
+}
+
+.scroll span{
+
+width:24px;
+
+height:42px;
+
+border:2px solid #d4af37;
+
+border-radius:30px;
+
+position:relative;
+
+}
+
+.scroll span::before{
+
+content:'';
+
+position:absolute;
+
+width:6px;
+
+height:6px;
+
+background:#d4af37;
+
+left:50%;
+
+transform:translateX(-50%);
+
+top:8px;
+
+border-radius:50%;
+
+animation:scroll 1.8s infinite;
+
+}
+
+.scroll p{
+
+margin-top:12px;
+
+font-size:14px;
+
+letter-spacing:2px;
+
+}
+
+/* Animation */
+
+@keyframes scroll{
+
+0%{
+
+opacity:0;
+
+top:8px;
+
+}
+
+50%{
+
+opacity:1;
+
+}
+
+100%{
+
+opacity:0;
+
+top:24px;
+
+}
+
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(50px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.profile{
+
+width:160px;
+
+height:160px;
+
+}
+
+h1{
+
+font-size:38px;
+
+}
+
+h3{
+
+font-size:17px;
+
+}
+
+.intro{
+
+font-size:15px;
+
+padding:0 10px;
+
+}
+
+.buttons{
+
+flex-direction:column;
+
+}
+
+.buttons a{
+
+width:100%;
+
+}
+
+}
+/* =======================================
+   ABOUT ME SECTION
+======================================= */
+
+.about-section{
+    padding:100px 25px;
+    background:#fffaf7;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.section-title h2{
+    font-family:'Playfair Display',serif;
+    font-size:42px;
+    color:#6f1734;
+}
+
+.gold-line{
+    width:90px;
+    height:4px;
+    background:#d4af37;
+    margin:18px auto;
+    border-radius:20px;
+}
+
+.section-title p{
+    color:#777;
+    font-size:18px;
+}
+
+.about-container{
+    display:flex;
+    justify-content:center;
+    gap:35px;
+    flex-wrap:wrap;
+}
+
+.about-card{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    width:320px;
+}
+
+.info-box{
+    background:white;
+    padding:28px;
+    border-radius:20px;
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+    transition:.35s;
+    border:1px solid rgba(212,175,55,.2);
+}
+
+.info-box:hover{
+    transform:translateY(-8px);
+}
+
+.info-box h3{
+    color:#6f1734;
+    margin-bottom:12px;
+}
+
+.info-box p{
+    color:#666;
+    line-height:1.8;
+}
+
+.about-text{
+    max-width:620px;
+}
+
+.about-text h3{
+    font-size:32px;
+    color:#6f1734;
+    margin-bottom:25px;
+}
+
+.about-text p{
+    color:#666;
+    line-height:2;
+    margin-bottom:18px;
+}
+
+.offer-section{
+    margin-top:70px;
+    text-align:center;
+}
+
+.offer-section h3{
+    font-size:34px;
+    color:#6f1734;
+    margin-bottom:35px;
+}
+
+.offer-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:20px;
+}
+
+.offer-card{
+    background:white;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+    transition:.35s;
+    font-size:18px;
+}
+
+.offer-card:hover{
+    transform:translateY(-8px);
+    background:#6f1734;
+    color:white;
+}
+
+.offer-card span{
+    display:block;
+    margin-top:10px;
+    font-size:15px;
+}
+
+.quote-box{
+    margin-top:70px;
+    background:linear-gradient(135deg,#6f1734,#8d2346);
+    color:white;
+    padding:40px;
+    border-radius:22px;
+    text-align:center;
+    box-shadow:0 20px 40px rgba(111,23,52,.25);
+}
+
+.quote-box p{
+    font-size:22px;
+    font-family:'Playfair Display',serif;
+    line-height:1.8;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.about-section{
+padding:80px 20px;
+}
+
+.section-title h2{
+font-size:34px;
+}
+
+.about-text h3{
+font-size:28px;
+text-align:center;
+}
+
+.about-text{
+text-align:center;
+}
+
+.offer-section h3{
+font-size:28px;
+}
+
+.quote-box p{
+font-size:18px;
+}
+
+}
+/* =======================================
+   SERVICES SECTION
+======================================= */
+
+.services-section{
+    padding:100px 25px;
+    background:linear-gradient(180deg,#fffaf7,#fff3ec);
+}
+
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+    margin-top:50px;
+}
+
+.service-card{
+    background:rgba(255,255,255,.95);
+    border-radius:22px;
+    padding:35px 28px;
+    text-align:center;
+    border:1px solid rgba(212,175,55,.25);
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+    transition:.4s ease;
+}
+
+.service-icon{
+    font-size:42px;
+    margin-bottom:18px;
+}
+
+.service-card h3{
+    font-family:'Playfair Display',serif;
+    color:#6f1734;
+    font-size:28px;
+    margin-bottom:18px;
+}
+
+.service-card p{
+    color:#666;
+    line-height:1.9;
+    font-size:15px;
+}
+
+.home-service{
+    margin-top:60px;
+    background:#fff;
+    border-left:6px solid #d4af37;
+    border-radius:18px;
+    padding:30px;
+    text-align:center;
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+    color:#6f1734;
+    font-size:24px;
+    font-family:'Playfair Display',serif;
+}
+
+.home-service p{
+    margin-top:15px;
+    font-family:'Poppins',sans-serif;
+    font-size:16px;
+    color:#666;
+    line-height:1.8;
+}
+
+.booking-box{
+    margin-top:60px;
+    text-align:center;
+    background:linear-gradient(135deg,#6f1734,#8d2346);
+    color:#fff;
+    padding:45px 30px;
+    border-radius:22px;
+    box-shadow:0 18px 40px rgba(111,23,52,.25);
+}
+
+.booking-box h3{
+    font-family:'Playfair Display',serif;
+    font-size:34px;
+    margin-bottom:15px;
+}
+
+.booking-box p{
+    font-size:17px;
+    line-height:1.8;
+    margin-bottom:28px;
+}
+/* =======================================
+   SERVICES SECTION EFFECTS
+======================================= */
+
+.service-card:hover{
+    transform:translateY(-12px);
+    background:#6f1734;
+    color:#fff;
+    border-color:#d4af37;
+    box-shadow:0 20px 45px rgba(111,23,52,.25);
+}
+
+.service-card:hover h3,
+.service-card:hover p{
+    color:#fff;
+}
+
+.service-card:hover .service-icon{
+    transform:scale(1.15) rotate(5deg);
+    transition:.4s;
+}
+
+.booking-box .book-btn{
+    display:inline-block;
+    margin-top:10px;
+}
+
+.booking-box .book-btn:hover{
+    transform:translateY(-4px) scale(1.03);
+}
+
+.home-service:hover{
+    transform:translateY(-6px);
+    transition:.35s;
+    box-shadow:0 18px 40px rgba(0,0,0,.12);
+}
+
+@media(max-width:768px){
+
+.services-section{
+padding:80px 20px;
+}
+
+.service-card{
+padding:28px 22px;
+}
+
+.service-card h3{
+font-size:24px;
+}
+
+.home-service{
+font-size:20px;
+padding:25px;
+}
+
+.booking-box{
+padding:35px 22px;
+}
+
+.booking-box h3{
+font-size:28px;
+}
+
+.booking-box p{
+font-size:15px;
+}
+
+}
+/* =======================================
+   GALLERY SECTION
+======================================= */
+
+.gallery-section{
+    padding:100px 25px;
+    background:#fffaf7;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:22px;
+    margin-top:60px;
+}
+
+.gallery-item{
+    overflow:hidden;
+    border-radius:22px;
+    cursor:pointer;
+    background:#fff;
+    box-shadow:0 12px 35px rgba(0,0,0,.08);
+    transition:.45s ease;
+}
+
+.gallery-item:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 45px rgba(0,0,0,.15);
+}
+
+.gallery-item img{
+    width:100%;
+    height:420px;
+    object-fit:cover;
+    display:block;
+    transition:.5s ease;
+}
+
+.gallery-item:hover img{
+    transform:scale(1.08);
+}
+/* =======================================
+   LIGHTBOX
+======================================= */
+
+.lightbox{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.92);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    opacity:0;
+    visibility:hidden;
+    transition:.35s ease;
+    z-index:9999;
+    padding:20px;
+}
+
+.lightbox.show{
+    opacity:1;
+    visibility:visible;
+}
+
+.lightbox img{
+    max-width:92%;
+    max-height:90%;
+    border-radius:18px;
+    box-shadow:0 25px 60px rgba(0,0,0,.45);
+    animation:zoomIn .35s ease;
+}
+
+.close-lightbox{
+    position:absolute;
+    top:25px;
+    right:30px;
+    color:#fff;
+    font-size:42px;
+    cursor:pointer;
+    font-weight:300;
+}
+
+@keyframes zoomIn{
+    from{
+        transform:scale(.85);
+        opacity:0;
+    }
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+@media(max-width:768px){
+
+    .gallery-grid{
+        grid-template-columns:1fr;
+        gap:18px;
+    }
+
+    .gallery-item img{
+        height:360px;
+    }
+
+}
+/* =======================================
+   CONTACT SECTION
+======================================= */
+
+.contact-section{
+    padding:100px 25px;
+    background:linear-gradient(180deg,#fffaf7,#fff3ec);
+}
+
+.contact-card{
+    max-width:750px;
+    margin:60px auto 0;
+    background:#fff;
+    padding:45px;
+    border-radius:25px;
+    text-align:center;
+    box-shadow:0 20px 45px rgba(0,0,0,.08);
+    border:1px solid rgba(212,175,55,.25);
+}
+
+.contact-item{
+    margin-bottom:30px;
+}
+
+.contact-icon{
+    font-size:34px;
+    margin-bottom:10px;
+}
+
+.contact-item h3{
+    font-family:'Playfair Display',serif;
+    color:#6f1734;
+    margin-bottom:8px;
+    font-size:26px;
+}
+
+.contact-item p{
+    color:#666;
+    font-size:16px;
+    line-height:1.8;
+}
+
+.contact-note{
+    margin-top:25px;
+    color:#777;
+    font-size:15px;
+    line-height:1.8;
+    font-style:italic;
+}
+
+.contact-card .book-btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:16px 38px;
+    border-radius:50px;
+    background:#6f1734;
+    color:#fff;
+    text-decoration:none;
+    font-weight:600;
+    transition:.35s ease;
+}
+
+.contact-card .book-btn:hover{
+    background:#d4af37;
+    color:#6f1734;
+    transform:translateY(-4px);
+    box-shadow:0 12px 25px rgba(212,175,55,.35);
+}
+
+@media(max-width:768px){
+
+    .contact-card{
+        padding:30px 20px;
+    }
+
+    .contact-item h3{
+        font-size:22px;
+    }
+
+}
+/* =======================================
+   AWARDS SECTION
+======================================= */
+
+.awards-section{
+    padding:100px 25px;
+    background:#fff;
+}
+
+.award-container{
+    max-width:1000px;
+    margin:60px auto 0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:50px;
+    flex-wrap:wrap;
+}
+
+.award-container img{
+    width:340px;
+    max-width:100%;
+    border-radius:22px;
+    box-shadow:0 18px 40px rgba(0,0,0,.12);
+    transition:.4s ease;
+}
+
+.award-container img:hover{
+    transform:scale(1.03);
+}
+
+.award-text{
+    flex:1;
+    min-width:280px;
+}
+
+.award-text h3{
+    font-family:'Playfair Display',serif;
+    color:#6f1734;
+    font-size:34px;
+    margin-bottom:18px;
+}
+
+.award-text p{
+    color:#666;
+    font-size:17px;
+    line-height:1.9;
+}
+
+@media(max-width:768px){
+
+    .award-container{
+        flex-direction:column;
+        text-align:center;
+        gap:30px;
+    }
+
+    .award-text h3{
+        font-size:28px;
+    }
+
+}
+/* =======================================
+   MAKEUP MASTERCLASS
+======================================= */
+
+.masterclass-section{
+    padding:100px 25px;
+    background:#fff8f5;
+    text-align:center;
+}
+
+.masterclass-section .section-title{
+    max-width:800px;
+    margin:auto;
+}
+
+.masterclass-note{
+    margin-top:25px;
+    font-weight:600;
+    color:#7a1736;
+}
+
+.masterclass-btn{
+    display:inline-block;
+    margin-top:35px;
+    padding:15px 38px;
+    background:#7a1736;
+    color:#fff;
+    text-decoration:none;
+    border-radius:50px;
+    transition:.3s ease;
+    font-weight:600;
+}
+
+.masterclass-btn:hover{
+    background:#d4af37;
+    color:#222;
+    transform:translateY(-3px);
+}
